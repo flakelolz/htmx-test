@@ -1,3 +1,4 @@
 * TODO
-  - [ ] Add tailwind
-  - [ ] Change server response based on headers from the client
+  - (x)  Make table scrollable
+  - ( ) Add pagination
+  - ( ) Change server response based on headers from the client

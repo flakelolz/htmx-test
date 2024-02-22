@@ -2,6 +2,7 @@ use anyhow::Result;
 use axum::{Extension, Router};
 use sqlx::sqlite::SqlitePool;
 use tokio::net::TcpListener;
+use tower_http::services::ServeFile;
 
 mod askama;
 mod database;
@@ -14,6 +15,7 @@ async fn main() -> Result<()> {
 
     let app = Router::new()
         .nest_service("/", handler::router())
+        .nest_service("/css", ServeFile::new("css/styles.css"))
         .layer(Extension(connection_pool));
 
     let listener = TcpListener::bind("127.0.0.1:3000").await?;

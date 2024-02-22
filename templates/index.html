@@ -2,7 +2,8 @@
 <div class="container">
     {% include "components/people_form.html" %}
     <div
-      id="people"
+      class="scrollable-table"
+      id="people-table-response"
       hx-get="/people"
       hx-trigger="load"
       hx-target="this"
