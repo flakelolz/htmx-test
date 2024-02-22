@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+    {% include "components/people_form.html" %}
+    <div
+      id="people"
+      hx-get="/people"
+      hx-trigger="load"
+      hx-target="this"
+      hx-swap="innerHTML"
+    >
+    </div>
+  </div>
+</div>
+{% endblock %}

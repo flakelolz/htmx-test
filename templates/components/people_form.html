@@ -1,0 +1,46 @@
+{% block peopleForm %}
+  <div class="mt-5">
+    <form class="form-inline mb-5"
+        id="person-form"
+        hx-post="/people"
+        hx-target="#peopleTable"
+        hx-swap="beforeend"
+        hx-ext="json-enc"
+    >
+      <label for="first_name" class="form-lable"></label>
+      <input
+        type="text"
+        name="first_name"
+        id="first_name"
+        placeholder="First Name"
+        class="form-control"
+      />
+
+      <label for="last_name" class="form-lable"></label>
+      <input
+        type="text"
+        name="last_name"
+        id="last_name"
+        placeholder="Last Name"
+        class="form-control"
+      />
+
+      <label for="age" class="form-lable"></label>
+      <input
+        type="number"
+        step="1"
+        max="120"
+        name="age"
+        id="age"
+        placeholder="Age"
+        class="form-control"
+      />
+
+      <button
+        class="btn btn-primary mt-4"
+      >
+        Submit
+      </button>
+    </form>
+{% endblock %}
+
