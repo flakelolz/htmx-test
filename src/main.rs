@@ -8,6 +8,7 @@ mod askama;
 mod database;
 mod handler;
 
+// Test
 #[tokio::main]
 async fn main() -> Result<()> {
     dotenv::dotenv().ok();
